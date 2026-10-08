@@ -6,6 +6,7 @@ services:
     environment:
       DRIVE_DATABASE_URL: postgresql+psycopg://drive:drive@db:5432/drive
       DRIVE_S3_ENDPOINT_URL: http://minio:9000
+    restart: on-failure
     depends_on:
       - db
       - minio
